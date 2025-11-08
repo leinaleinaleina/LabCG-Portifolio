@@ -1,24 +1,27 @@
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-    *{  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-size: 20px;
-        font-family: 'Poppins', Times, serif;
     }
 
-    body {
-            color: #333;
+    body {  
+            font-family: 'Poppins', Times, serif;
+            font-size: 1rem;
+            color: white;
             background-color: #022132;
             display: flex;
             flex-direction: column;
-            position: relative;
-            margin: 0;
-            padding: 0;
             min-height: 100vh;
             width: 100%;
-
         }
+        
+        img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        }
+
 
         .header {
             background-color: #022132;
@@ -33,39 +36,35 @@
     .logo {
             display: flex;
             align-items: center;
-            font-size: 22px;
             font-weight: bold;
     }
 
     .logo img {
-            height: 100px;
-    }
-
-    .nav-links {
-            font-size: 18px;
+        max-height: 100px;
     }
 
     .nav-links{
-            color: white;
-            text-decoration: none;
-            margin-left: 30px;
+
+        color: white;
+        text-decoration: none;
+        margin-left: 30px;
     }
 
     .logo-section {
             display: flex;
             justify-content: center; 
             align-items: center;   
-            font-size: 22px;
             font-weight: bold;
     }
 
     .logo-section img {
-            height: 300px;
+            max-height: 300px;
     }
 
-    .light-section {
+    .light-section, .HOME {
         position: relative; 
         text-align: center;
+        flex-direction: column; 
         color: white;
         background-color: #14828F;
         display: flex;
@@ -73,44 +72,41 @@
         align-items: center;   
         width: 100%;                 
         padding: 50px 40px; 
-        /* flex-direction: column; */
-        display: block;
     }
     
     .light-section h1 {
         justify-content: center; 
         align-items: center;   
         margin-top: 20px;
-        margin-left: 1%;
         background-color: #14828F;
         color: #FDCE61;
-        font-size:40px;
         display: flex;
-    };
+    }
 
     .dark-section {
-        position: relative; 
-        text-align: center;
-        color: white;
-        background-color: #022132;
-        /* justify-content: center; Centraliza na horizontal */
-        /* align-items: center;   Centraliza na vertical */
+        display: flex;
+        flex-direction: column;  /* Empilha os itens (um em cima do outro) */
+        align-items: center;     /* Centraliza na HORIZONTAL */
+        justify-content: center; /* Centraliza na VERTICAL */
         width: 100%;                 
-        padding: 100px 100px; 
-        /* flex-direction: column; */
-        display: block;
+        padding: 50px 40px; 
+        background-color: #022132;
+        color: white;
+        position: relative;
+        
     }
     
     .dark-section h1 {
-        /* justify-content: center; 
-        align-items: center;    */
-        margin-top: 40px;
-        margin-left: 10%;
-        background-color: #022132;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
         color: #FDCE61;
-        font-size:40px;
-        display: flex;
-    };
+    }
+
+    .dark-section p {
+        margin-left: 10%;
+        margin-bottom: 40px;
+    }
 
     .forms {
         justify-content: center;
@@ -123,16 +119,23 @@
     };
 
     .atuacao {
-            display: flex;
-            justify-content: center; 
-            align-items: center;   
-            font-size: 20px;
-            font-weight: bold;
-    }
+    font-size: 1.25rem;  /* opcional, só pra manter tamanho de texto */
+    font-weight: bold;
+    text-align: center;
+}
 
     .atuacao img {
-            height: 200px;
-            margin-left: 10%;
-            margin-top: 50px;
-    }
+  max-width: 7rem;      /* ~112 px se 1rem = 16px */
+  height: auto;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
 
+    .parceiros img{
+        height: 80px;
+        width: auto; 
+        display: flex;
+        margin-top: 80px;   
+        margin-bottom: 80px;
+        flex-direction: column;
+    }

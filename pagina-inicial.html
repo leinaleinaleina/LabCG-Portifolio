@@ -3,151 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Arquivo CSS próprio -->
+    <link rel="stylesheet" href="TDS.css">
+
     <title>Trabalho de TDS - pagina inicial</title>
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-    *{  
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-size: 20px;
-        font-family: 'Poppins', Times, serif;
-    }
-
-    body {
-            color: #333;
-            background-color: #022132;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            width: 100%;
-
-        }
-
-        .header {
-            background-color: #022132;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 30px;
-            width: 100%;
-        }
-
-    .logo {
-            display: flex;
-            align-items: center;
-            font-size: 22px;
-            font-weight: bold;
-    }
-
-    .logo img {
-            height: 100px;
-    }
-
-    .nav-links {
-            font-size: 18px;
-    }
-
-    .nav-links{
-            color: white;
-            text-decoration: none;
-            margin-left: 30px;
-    }
-
-    .logo-section {
-            display: flex;
-            justify-content: center; 
-            align-items: center;   
-            font-size: 22px;
-            font-weight: bold;
-    }
-
-    .logo-section img {
-            height: 300px;
-    }
-
-    .light-section {
-        position: relative; 
-        text-align: center;
-        color: white;
-        background-color: #14828F;
-        display: flex;
-        justify-content: center; 
-        align-items: center;   
-        width: 100%;                 
-        padding: 50px 40px; 
-        /* flex-direction: column; */
-        display: block;
-    }
-    
-    .light-section h1 {
-        justify-content: center; 
-        align-items: center;   
-        margin-top: 20px;
-        margin-left: 1%;
-        background-color: #14828F;
-        color: #FDCE61;
-        font-size:40px;
-        display: flex;
-    };
-
-    .dark-section {
-        position: relative; 
-        text-align: center;
-        color: white;
-        background-color: #022132;
-        /* justify-content: center; Centraliza na horizontal */
-        /* align-items: center;   Centraliza na vertical */
-        width: 100%;                 
-        padding: 100px 100px; 
-        /* flex-direction: column; */
-        display: block;
-    }
-    
-    .dark-section h1 {
-        /* justify-content: center; 
-        align-items: center;    */
-        margin-top: 40px;
-        margin-left: 10%;
-        background-color: #022132;
-        color: #FDCE61;
-        font-size:40px;
-        display: flex;
-    };
-
-    .forms {
-        justify-content: center;
-        align-items: center;
-        margin-top: 40px;
-    };
-
-    .forms label {
-        color: white;  
-    };
-
-    .atuacao {
-            display: flex;
-            justify-content: left; 
-            align-items: left;   
-            font-size: 20px;
-            font-weight: bold;
-    }
-
-    .atuacao img {
-            height: 200px;
-            margin-right: 70%;
-            margin-left: 20px;
-            margin-top: 50px;
-    }
-
-
-
-</style>
 <body>
     <header class = "header">
         <div class = "logo">
@@ -160,20 +27,20 @@
             <a href = "#" class = "nav-links">Contato</a>
         </div>
     </header>
-
+<main> 
     <section>
-        <div class = "light-section">
+        <div class = "HOME" style = "flex-direction: column;">
             <div class = "logo-section">
                 <img src = "LabCG.png" alt = "logo">
             </div>
-            
                 <p>Pela ciência!</p>
         </div>
     </section>
 
     <section>
         <div class = "dark-section">
-           <h1>Nossa Missão</h1>
+           <h1 style = "margin-right: 70%;">Nossa Missão</h1>
+           <p>alo</p>
         </div>
     </section>
 
@@ -181,27 +48,109 @@
         <div class = "light-section">
             <h1>Área de atuação</h1>
 
-            <div class = "atuacao">
-                <img src = "statistics.png" alt = "computers"> 
-                <p>Visão Computacional</p>
+          <div class="atuacao">
+  <div class="row row-cols-2 justify-content-center">
 
-                <img src = "ai-assistant.png" alt = "ia">
-                <p>Inteligência Artificial</p>
+    <div class="col text-center">
+      <img src="statistics.png" class="img-fluid" alt="Visão Computacional">
+      <p>Visão Computacional</p>
+    </div>
 
-                <img src = "blind.png" alt = "cego">
-                <p>Acessibilidade</p>
+    <div class="col text-center">
+      <img src="ai-assistant.png" class="img-fluid" alt="Inteligência Artificial">
+      <p>Inteligência Artificial</p>
+    </div>
 
-                <img src = "meta.png" alt = "oculos">
-                <p>Realidade Estendida</p>
-            </div>
+    <div class="col text-center">
+      <img src="meta.png" class="img-fluid" alt="Realidade Estendida">
+      <p>Realidade Estendida</p>
+    </div>
+
+    <div class="col text-center">
+      <img src="blind.png" class="img-fluid" alt="Acessibilidade">
+      <p>Acessibilidade</p>
+    </div>
+
+  </div>
+</div>
+    </section>
+
+    <section>
+
+        <div class = "dark-section">
+            <h1>Nossos parceiros</h1>
+            
+            <div class = "parceiros">
+                <div class = "row justify-content-center">
+
+                    <div class="col-auto text-center">
+                        <a href="https://voxarlabs.cin.ufpe.br/">
+                            <img src = "logo voxar.png" class="img-fluid" alt = "voxar">
+                        </a>
+                    </div>
+
+                    <div class="col-auto text-center">
+                        <a target = "_blank" href = "https://lapis.each.usp.br/pt/">
+                            <img src = "lapis.png" class="img-fluid" alt = "lapis">
+                        </a>
+                    </div>
+
+                    <div class="col-auto text-center">
+                        <a target = "_blank" href = "https://www.itaipuparquetec.org.br/">
+                            <img src = "itaipuparquetec.png" class="img-fluid" alt = "pti">
+                        </a>
+                    </div>
+
+                    <div class="col-auto text-center">
+                        <a target = "_blank" href = "https://www.ufl.edu/">
+                            <img src = "UF-logo.png" class="img-fluid" alt = "pti">
+                        </a>
+                    </div>
+
+                    <div class="col-auto text-center">
+                        <h1>aaaaaaa:</h1>
+                        <a target = "_blank" href = "https://www.unioeste.br/">
+                            <img src = "Logo_unioeste.png" class="img-fluid" alt = "pti">
+                        </a>
+                    </div>
+                </div>
+            </div>    
         </div>
     </section>
-<!-- 
-    <section> 
-        <div class = "row row-cols-2">
+
+    <section class = "light-section">
+        <h1>Projetos</h1>
+
+
+    <div class="atuacao">
+        <div class="row row-cols-1 row-cols-md-2">
+
+            <div class="text-center">
+                <img src="" class="img-fluid" alt="Projetos de TCC">
+            </div>
+
+            <div class="text-center">
+                <img src="" class="img-fluid" alt="NarraAI">
+            </div>
+
+            <div class="text-center">
+                <img src="" class="img-fluid" alt="Geoconnect">
+            </div>
             
+            <div class="text-center">
+                <img src="" class="img-fluid" alt="Projetos de IC">
+            </div>
+
         </div>
-    </section> -->
+    </div>
+</section>
+        </div>
+    </section>
+
+
+    <section class = "dark-section"> 
+        
+    </section>
 
     <!-- <section> -->
         <!-- <div class = "dark-section">
@@ -214,10 +163,10 @@
                 <input type = "text" id = "nome" required/>
 
                 <label for = "E-mail">E-mail para contato</label>
-                <input type = "text" id = "email" required/>
+                <input type = "email" id = "email" required/>
 
                 <label for = "Numero">Número de telefone</label>
-                <input type = "text" id = "telefone" required/>
+                <input type = "tel" id = "telefone" required/>
 
                 <label for = "Lugar">Instituição/Empresa</label>
                 <input type = "text" id = "lugar" required/>
@@ -226,7 +175,8 @@
                 <input type = "text" id = "assunto"/>
             </div>
         </form> -->
-    </section>
+    <!-- </section> -->
+</main>
 </body>
 </head>
 </html>
