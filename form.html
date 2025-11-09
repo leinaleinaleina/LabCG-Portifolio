@@ -35,7 +35,7 @@
                         <p class="text-muted text-center mb-5">Preencha o formulário abaixo de acordo com seu perfil.</p>
                         
                         <!-- Definição do formulário para inscrição usando o método e ação -->
-                        <form id="membershipForm" method="post" action="#"">
+                        <form id="membershipForm" onsubmit="avisoSubmissao()" method="post" action="#"">
 
                             <!-- Grupo de identificação do usuário, todos campos obrigatórios -->
                             <!-- Tipos utilizados: Text, email, tel, password -->
@@ -89,12 +89,12 @@
                             <div id="secao-unioeste" class="secao-dinamica d-none">
                                 <div class="row g-3">
                                     <div class="col-md-4">
-                                        <label for="ra_aluno" class="form-label">R.A.</label>
-                                        <input type="number" class="form-control" id="ra_aluno" name="ra_aluno">
+                                        <label for="ra_aluno" class="form-label">R.A. *</label>
+                                        <input type="number" class="form-control obrigatorio-dinamico" id="ra_aluno" name="ra_aluno">
                                     </div>
                                     <div class="col-md-8">
-                                        <label for="curso_unioeste" class="form-label">Curso</label>
-                                        <input type="text" class="form-control" list="listaCursos" id="curso_unioeste" name="curso_unioeste" placeholder="Digite ou selecione...">
+                                        <label for="curso_unioeste" class="form-label">Curso *</label>
+                                        <input type="text" class="form-control obrigatorio-dinamico" list="listaCursos" id="curso_unioeste" name="curso_unioeste" placeholder="Digite ou selecione...">
                                         
                                         <datalist id="listaCursos">
                                             <option value="Ciência da Computação">
@@ -105,8 +105,8 @@
                                         </datalist>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="ano_letivo" class="form-label">Ano/Período Atual</label>
-                                        <input type="number" class="form-control" id="ano_letivo" name="ano_letivo" min="1" max="10">
+                                        <label for="ano_letivo" class="form-label">Ano/Período Atual *</label>
+                                        <input type="number" class="form-control obrigatorio-dinamico" id="ano_letivo" name="ano_letivo" min="1" max="10">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="previsao_formatura" class="form-label">Previsão de Formatura</label>
@@ -120,24 +120,24 @@
                             <div id="secao-externo" class="secao-dinamica d-none">
                                 <div class="row g-3">
                                     <div class="col-md-12">
-                                        <label for="instituicao_externa" class="form-label">Instituição de Ensino</label>
-                                        <input type="text" class="form-control" id="instituicao_externa" name="instituicao_externa">
+                                        <label for="instituicao_externa" class="form-label">Instituição de Ensino *</label>
+                                        <input type="text" class="form-control obrigatorio-dinamico" id="instituicao_externa" name="instituicao_externa">
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="curso_externo" class="form-label">Curso</label>
-                                        <input type="text" class="form-control" list="listaCursos" id="curso_externo" name="curso_externo" placeholder="Digite ou selecione...">
+                                        <label for="curso_externo" class="form-label">Curso *</label>
+                                        <input type="text" class="form-control obrigatorio-dinamico" list="listaCursos" id="curso_externo" name="curso_externo" placeholder="Digite ou selecione...">
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="ano_letivo_externo" class="form-label">Ano/Período Atual</label>
-                                        <input type="number" class="form-control" id="ano_letivo_externo" name="ano_letivo_externo" min="1" max="10">
+                                        <label for="ano_letivo_externo" class="form-label">Ano/Período Atual *</label>
+                                        <input type="number" class="form-control obrigatorio-dinamico" id="ano_letivo_externo" name="ano_letivo_externo" min="1" max="10">
                                     </div>
                                     <div class="col-md-8">
-                                        <label for="cidade_externo" class="form-label">Cidade da Instituição</label>
-                                        <input type="text" class="form-control" id="cidade_externo" name="cidade_externo">
+                                        <label for="cidade_externo" class="form-label">Cidade da Instituição *</label>
+                                        <input type="text" class="form-control obrigatorio-dinamico" id="cidade_externo" name="cidade_externo">
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="estado_externo" class="form-label">Estado (UF)</label>
-                                        <select class="form-select" id="estado_externo" name="estado_externo">
+                                        <label for="estado_externo" class="form-label">Estado (UF) *</label>
+                                        <select class="form-select obrigatorio-dinamico" id="estado_externo" name="estado_externo">
                                             <option selected disabled>Selecione...</option>
                                             <option value="PR">PR</option>
                                             <option value="SP">RS</option>
@@ -157,16 +157,16 @@
                             <div id="secao-pesquisador" class="secao-dinamica d-none">
                                 <div class="row g-3">
                                     <div class="col-md-12">
-                                        <label for="instituicao_parceira" class="form-label">Instituição ou Empresa Atual</label>
-                                        <input type="text" class="form-control" id="instituicao_parceira" name="instituicao_parceira">
+                                        <label for="instituicao_parceira" class="form-label">Instituição ou Empresa Atual *</label>
+                                        <input type="text" class="form-control obrigatorio-dinamico" id="instituicao_parceira" name="instituicao_parceira">
                                     </div>
                                     <div class="col-md-8">
-                                        <label for="cidade_pesquisador" class="form-label">Cidade</label>
-                                        <input type="text" class="form-control" id="cidade_pesquisador" name="cidade_pesquisador">
+                                        <label for="cidade_pesquisador" class="form-label">Cidade *</label>
+                                        <input type="text" class="form-control obrigatorio-dinamico" id="cidade_pesquisador" name="cidade_pesquisador">
                                     </div>
                                     <div class="col-md-4">
-                                        <label for="estado_pesquisador" class="form-label">Estado (UF)</label>
-                                        <select class="form-select" id="estado_pesquisador" name="estado_pesquisador">
+                                        <label for="estado_pesquisador" class="form-label">Estado (UF) *</label>
+                                        <select class="form-select obrigatorio-dinamico" id="estado_pesquisador" name="estado_pesquisador">
                                             <option selected disabled>Selecione...</option>
                                             <option value="PR">PR</option>
                                             <option value="SP">RS</option>
@@ -175,8 +175,8 @@
                                         </select>
                                     </div>
                                     <div class="col-md-12">
-                                        <label for="area_proposta" class="form-label">Área de Proposta de Parceria</label>
-                                        <input type="text" class="form-control" id="area_proposta" name="area_proposta" placeholder="Ex: Desenvolvimento de IA para acessibilidade auditiva">
+                                        <label for="area_proposta" class="form-label">Área de Proposta de Parceria *</label>
+                                        <input type="text" class="form-control obrigatorio-dinamico" id="area_proposta" name="area_proposta" placeholder="Ex: Desenvolvimento de IA para acessibilidade auditiva">
                                     </div>
                                     <div class="col-md-12">
                                         <label for="link_profissional" class="form-label">Link Profissional (Lattes, LinkedIn, Portfólio) - Opcional</label>
