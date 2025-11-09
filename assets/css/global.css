@@ -1,0 +1,96 @@
+/* ========================================
+   ARQUIVO GLOBAL DE ESTILOS - LabCG
+   Este arquivo contém estilos que são
+   compartilhados por todas as páginas do site,
+   como o cabeçalho (header), rodapé (footer)
+   e estilos base (body).
+   ========================================
+*/
+
+/* --- Estilos Base (Reset e Padrões) --- */
+/* * Importa a fonte Poppins que você já estava usando.
+ * É bom manter as importações globais aqui.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* * Define padrões para todo o site.
+ * - 'box-sizing' facilita o controle de tamanhos.
+ * - Define a fonte padrão (Poppins) para todo o corpo.
+ * - Define a cor de fundo padrão e a cor do texto.
+ * - Garante que o body ocupe 100% da altura da tela.
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {  
+    font-family: 'Poppins', sans-serif; /* Fonte padrão */
+    font-size: 1rem; /* Tamanho de fonte base (requisito do trabalho) */
+    color: white; /* Cor do texto padrão */
+    background-color: #022132; /* Cor de fundo padrão */
+    min-height: 100vh; /* Altura mínima de 100% da tela */
+    display: flex; /* (requisito do trabalho) */
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Cabeçalho (Header) --- */
+/* * Estilos copiados do seu 'index.css' e 'form.css'.
+ * Serão usados em todas as páginas.
+ * 'display: flex' é usado para alinhar a logo e os links (requisito do trabalho).
+ */
+.header {
+    background-color: #022132;
+    color: white;
+    display: flex; /* (requisito do trabalho) */
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    width: 100%; /* (requisito do trabalho) */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.logo img {
+    max-height: 100px;
+}
+
+.nav-links{
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+
+/* --- Rodapé (Footer) --- */
+/* * Este é o novo rodapé (footer) que você solicitou.
+ * - 'margin-top: auto' é um truque com flexbox (do body)
+ * para empurrar o rodapé para o final da página.
+ * - 'padding-left' cria a margem à esquerda que você pediu.
+ */
+.footer {
+    background-color: #022132; /* Mesma cor do header para consistência */
+    color: #FDCE61; /* Cor de destaque amarela */
+    padding: 20px;
+    padding-left: 40px; /* Sua margem esquerda solicitada */
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 100%;
+    margin-top: auto; /* Empurra o rodapé para o fim da página */
+    border-top: 2px solid #14828F; /* Uma pequena linha divisória */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem; /* (requisito do trabalho - 'rem') */
+}
