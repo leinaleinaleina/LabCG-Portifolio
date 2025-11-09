@@ -30,12 +30,15 @@
         <div class="row justify-content-center"> <!-- Cria uma linha com 12 colunas justificada e centralizada  -->
             <div class="col-lg-8"> <!-- Ocupa 8 das 12 colunas com os elementos-->
                 <div class="card form-card shadow-lg"> 
-                    <div class="card-body p-5">
+                    <div class="card-body p-5"> <!-- Adiciona espaçamento interno e coloca ele no máximo-->
                         <h2 class="text-center mb-4" style="color: #022132;">Venha fazer parte do LabCG!</h2>
                         <p class="text-muted text-center mb-5">Preencha o formulário abaixo de acordo com seu perfil.</p>
+                        
+                        <!-- Definição do formulário para inscrição usando o método e ação -->
+                        <form id="membershipForm" method="post" action="#"">
 
-                        <form id="membershipForm" method="get" action="#"">
-
+                            <!-- Grupo de identificação do usuário, todos campos obrigatórios -->
+                            <!-- Tipos utilizados: Text, email, tel, password -->
                             <h4 class="mb-3 section-title">1. Identificação</h4>
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -55,7 +58,9 @@
                                     <input type="password" class="form-control" id="senha_acompanhamento" name="senha" required>
                                 </div>
 
-                                <div class="col-12 mt-4">
+                                <!-- Grupo para seleção de perfil do usuário, obrigatório -->
+                                <!-- Tipos utilizados: Radio -->
+                                <div class="col-12 mt-5">
                                     <label class="form-label d-block fw-bold">Qual seu Perfil de Interesse? *</label>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input vinculo-radio" type="radio" name="vinculo" id="vinculoUnioeste" value="unioeste" required>
@@ -74,9 +79,13 @@
 
                             <hr class="my-5">
 
+                            <!-- Grupo para detalhes do perfil, variável de acordo com o perfil -->
                             <h4 class="mb-3 section-title">2. Detalhes do Perfil</h4>
+                            <!-- Parágrafo temporário enquanto não houver seleção, oculto depois pelo javascript -->
                             <p id="aviso-vinculo" class="text-muted">Selecione seu perfil acima para ver os campos específicos.</p>
 
+                            <!-- Grupo para detalhes do perfil do "Aluno Unioeste", todos campos obrigatórios TEM QUE CORRIGIR -->
+                            <!-- Tipos utilizados: Number, text (com datalist), date -->
                             <div id="secao-unioeste" class="secao-dinamica d-none">
                                 <div class="row g-3">
                                     <div class="col-md-4">
@@ -85,7 +94,7 @@
                                     </div>
                                     <div class="col-md-8">
                                         <label for="curso_unioeste" class="form-label">Curso</label>
-                                        <input class="form-control" list="listaCursos" id="curso_unioeste" name="curso_unioeste" placeholder="Digite ou selecione...">
+                                        <input type="text" class="form-control" list="listaCursos" id="curso_unioeste" name="curso_unioeste" placeholder="Digite ou selecione...">
                                         
                                         <datalist id="listaCursos">
                                             <option value="Ciência da Computação">
@@ -97,7 +106,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="ano_letivo" class="form-label">Ano/Período Atual</label>
-                                        <input type="number" class="form-control" id="ano_letivo" name="ano_letivo" min="1" max="5">
+                                        <input type="number" class="form-control" id="ano_letivo" name="ano_letivo" min="1" max="10">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="previsao_formatura" class="form-label">Previsão de Formatura</label>
@@ -106,6 +115,8 @@
                                 </div>
                             </div>
 
+                            <!-- Grupo para detalhes do perfil do "Aluno Externo", todos campos obrigatórios TEM QUE CORRIGIR -->
+                            <!-- Tipos utilizados: Text (com list), number, select, date -->
                             <div id="secao-externo" class="secao-dinamica d-none">
                                 <div class="row g-3">
                                     <div class="col-md-12">
@@ -141,6 +152,8 @@
                                 </div>
                             </div>
 
+                            <!-- Grupo para detalhes do perfil do "Pesquisador/Profissional", todos campos obrigatórios TEM QUE CORRIGIR -->
+                            <!-- Tipos utilizados: Text (com list), select, url -->
                             <div id="secao-pesquisador" class="secao-dinamica d-none">
                                 <div class="row g-3">
                                     <div class="col-md-12">
@@ -174,9 +187,13 @@
 
                             <hr class="my-5">
 
+                            <!-- Grupo para Áreas de interesse, nenhum campo obrigatório -->
+                            <!-- Tipos utilizados: Checkbox, range -->
+                            <!-- OBS: Aqui é utilizado uma tabela -->
                             <h4 class="mb-3 section-title">3. Áreas de Interesse</h4>
                             <p class="text-muted">Marque as áreas que te interessam e defina seu nível de conhecimento atual.</p>
                             
+                            <!-- Definição de uma tabela responsiva -->
                             <div class="table-responsive">
                                 <table class="table table-hover align-middle">
                                     <thead class="table-light">
@@ -252,19 +269,20 @@
 
                             <hr class="my-5">
 
+                            <!-- Grupo para informações adicionais, nenhum campo obrigatório -->
+                            <!-- Tipos utilizados: File, textarea -->
                             <h4 class="mb-3 section-title">4. Sua Voz</h4>
-                            
                             <div class="mb-3">
                                 <label for="anexo_geral" class="form-label fw-bold">Anexo Opcional (Currículo, Histórico ou Proposta)</label>
                                 <input type="file" class="form-control" id="anexo_geral" name="anexo" accept=".pdf,.doc,.docx,.jpg,.png">
                                 <div class="form-text">Formatos aceitos: PDF, Imagens ou Documentos de texto.</div>
                             </div>
-
                             <div class="mb-4">
                                 <label for="mensagem_extra" class="form-label fw-bold">Mensagem Adicional</label>
                                 <textarea class="form-control" id="mensagem_extra" name="mensagem" rows="4" placeholder="Conte-nos suas motivações, ideias de projeto ou deixe um recado."></textarea>
                             </div>
 
+                            <!-- Botão final para submissão -->
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-lg btn-primary-custom">Enviar Inscrição</button>
                             </div>
