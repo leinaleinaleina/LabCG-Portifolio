@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #14828F;
+    color: #333;
+}
+
+.form-card {
+    border: none;
+    border-radius: 15px;
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    color: #14828F;
+    font-weight: 600;
+    border-left: 5px solid #FDCE61;
+    padding-left: 10px;
+}
+
+.form-label {
+    color: #022132;
+    font-weight: 500;
+}
+
+.btn-primary-custom {
+    background-color: #14828F;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #022132;
+    color: #FDCE61;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(20, 130, 143, 0.05);
+}
+
+.header {
+    background-color: #022132;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    width: 100%;
+}
+
+.logo {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+}
+
+.logo img {
+    max-height: 100px;
+}
+
+.nav-links{
+
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.logo-section {
+        display: flex;
+        justify-content: center; 
+        align-items: center;   
+        font-weight: bold;
+}
+
+.logo-section img {
+        max-height: 300px;
+}

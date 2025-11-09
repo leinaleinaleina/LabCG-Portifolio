@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabCG - Trabalhe Conosco</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/form.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/form.js"></script>
+</head>
+<body>
+        <header class = "header">
+        <div class = "logo">
+            <img src = "assets/img/LabCG.png" alt = "logo lab">
+        </div>
+
+        <div class = "nav-links">
+            <a href = "#" class = "nav-links">Portifólio</a>
+            <a href = "#" class = "nav-links">Sobre nós</a>
+            <a href = "#" class = "nav-links">Contato</a>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card form-card shadow-lg">
+                    <div class="card-body p-5">
+                        <h2 class="text-center mb-4" style="color: #022132;">Venha fazer parte do LabCG!</h2>
+                        <p class="text-muted text-center mb-5">Preencha o formulário abaixo de acordo com seu perfil.</p>
+
+                        <form id="membershipForm">
+
+                            <h4 class="mb-3 section-title">1. Identificação</h4>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nome" class="form-label">Nome Completo *</label>
+                                    <input type="text" class="form-control" id="nome" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">E-mail Principal *</label>
+                                    <input type="email" class="form-control" id="email" required placeholder="exemplo@unioeste.br">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="whatsapp" class="form-label">WhatsApp *</label>
+                                    <input type="tel" class="form-control" id="whatsapp" required placeholder="(XX) 9XXXX-XXXX">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="senha_acompanhamento" class="form-label">Crie uma senha de acompanhamento *</label>
+                                    <input type="password" class="form-control" id="senha_acompanhamento" required>
+                                    <div class="form-text">(Simulação para disciplina)</div>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <label class="form-label d-block fw-bold">Qual seu Perfil de Interesse? *</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input vinculo-radio" type="radio" name="vinculo" id="vinculoUnioeste" value="unioeste" required>
+                                        <label class="form-check-label" for="vinculoUnioeste">Aluno Unioeste</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input vinculo-radio" type="radio" name="vinculo" id="vinculoExterno" value="externo">
+                                        <label class="form-check-label" for="vinculoExterno">Aluno Externo</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input vinculo-radio" type="radio" name="vinculo" id="vinculoPesquisador" value="pesquisador">
+                                        <label class="form-check-label" for="vinculoPesquisador">Pesquisador/Profissional</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-5">
+
+                            <h4 class="mb-3 section-title">2. Detalhes do Perfil</h4>
+                            <p id="aviso-vinculo" class="text-muted">Selecione seu perfil acima para ver os campos específicos.</p>
+
+                            <div id="secao-unioeste" class="secao-dinamica d-none">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <label for="ra_aluno" class="form-label">R.A.</label>
+                                        <input type="number" class="form-control" id="ra_aluno">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label for="curso_unioeste" class="form-label">Curso</label>
+                                        <select class="form-select" id="curso_unioeste">
+                                            <option selected disabled>Selecione...</option>
+                                            <option value="Ciência da Computação">Ciência da Computação</option>
+                                            <option value="Engenharia Mecânica">Engenharia Mecânica</option>
+                                            <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+                                            <option value="Administração">Administração</option>
+                                            <option value="Outro">Outro</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ano_letivo" class="form-label">Ano/Período Atual</label>
+                                        <input type="number" class="form-control" id="ano_letivo" min="1" max="5">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="previsao_formatura" class="form-label">Previsão de Formatura</label>
+                                        <input type="date" class="form-control" id="previsao_formatura">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="secao-externo" class="secao-dinamica d-none">
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <label for="instituicao_externa" class="form-label">Instituição de Ensino</label>
+                                        <input type="text" class="form-control" id="instituicao_externa">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="curso_externo" class="form-label">Curso</label>
+                                        <input type="text" class="form-control" id="curso_externo">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ano_letivo_externo" class="form-label">Ano/Período Atual</label>
+                                        <input type="number" class="form-control" id="ano_letivo_externo" min="1" max="10">
+                                    </div>
+                                     <div class="col-md-8">
+                                        <label for="cidade_externo" class="form-label">Cidade da Instituição</label>
+                                        <input type="text" class="form-control" id="cidade_externo">
+                                    </div>
+                                     <div class="col-md-4">
+                                        <label for="estado_externo" class="form-label">Estado (UF)</label>
+                                        <select class="form-select" id="estado_externo">
+                                            <option selected disabled>Selecione...</option>
+                                            <option value="PR">PR</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SC">SC</option>
+                                            <option value="RS">RS</option>
+                                            <option value="MS">MS</option>
+                                            <option value="OUTRO">Outro</option>
+                                        </select>
+                                    </div>
+                                     <div class="col-md-6">
+                                        <label for="previsao_formatura_externo" class="form-label">Previsão de Formatura</label>
+                                        <input type="date" class="form-control" id="previsao_formatura_externo">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="secao-pesquisador" class="secao-dinamica d-none">
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <label for="instituicao_parceira" class="form-label">Instituição ou Empresa Atual</label>
+                                        <input type="text" class="form-control" id="instituicao_parceira">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label for="cidade_pesquisador" class="form-label">Cidade</label>
+                                        <input type="text" class="form-control" id="cidade_pesquisador">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="estado_pesquisador" class="form-label">Estado (UF)</label>
+                                        <select class="form-select" id="estado_pesquisador">
+                                            <option selected disabled>Selecione...</option>
+                                            <option value="PR">PR</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SC">SC</option>
+                                            <option value="OUTRO">Outro</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="area_proposta" class="form-label">Área de Proposta de Parceria</label>
+                                        <input type="text" class="form-control" id="area_proposta" placeholder="Ex: Desenvolvimento de IA para saúde">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="link_profissional" class="form-label">Link Profissional (Lattes, LinkedIn, Portfólio) - Opcional</label>
+                                        <input type="url" class="form-control" id="link_profissional" placeholder="https://...">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-5">
+
+                            <h4 class="mb-3 section-title">3. Áreas de Interesse</h4>
+                            <p class="text-muted">Marque as áreas que te interessam e defina seu nível de conhecimento atual.</p>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th scope="col" style="width: 40%;">Área</th>
+                                            <th scope="col">Nível de Conhecimento (0 a 4)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input area-interesse-check" type="checkbox" value="visao_comp" id="check_visao">
+                                                    <label class="form-check-label fw-bold" for="check_visao">Visão Computacional</label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="me-2 text-muted small">Zero</span>
+                                                    <input type="range" class="form-range area-nivel-range" min="0" max="4" step="1" id="range_visao" disabled>
+                                                    <span class="ms-2 text-muted small">Avançado</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input area-interesse-check" type="checkbox" value="ia" id="check_ia">
+                                                    <label class="form-check-label fw-bold" for="check_ia">Inteligência Artificial</label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="me-2 text-muted small">Zero</span>
+                                                    <input type="range" class="form-range area-nivel-range" min="0" max="4" step="1" id="range_ia" disabled>
+                                                    <span class="ms-2 text-muted small">Avançado</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input area-interesse-check" type="checkbox" value="xr" id="check_xr">
+                                                    <label class="form-check-label fw-bold" for="check_xr">Realidade Estendida (XR)</label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="me-2 text-muted small">Zero</span>
+                                                    <input type="range" class="form-range area-nivel-range" min="0" max="4" step="1" id="range_xr" disabled>
+                                                    <span class="ms-2 text-muted small">Avançado</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input area-interesse-check" type="checkbox" value="modelagem3d" id="check_3d">
+                                                    <label class="form-check-label fw-bold" for="check_3d">Modelagem/Design 3D</label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="me-2 text-muted small">Zero</span>
+                                                    <input type="range" class="form-range area-nivel-range" min="0" max="4" step="1" id="range_3d" disabled>
+                                                    <span class="ms-2 text-muted small">Avançado</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <hr class="my-5">
+
+                            <h4 class="mb-3 section-title">4. Sua Voz</h4>
+                            
+                            <div class="mb-3">
+                                <label for="anexo_geral" class="form-label fw-bold">Anexo Opcional (Currículo, Histórico ou Proposta)</label>
+                                <input type="file" class="form-control" id="anexo_geral" accept=".pdf,.doc,.docx,.jpg,.png">
+                                <div class="form-text">Formatos aceitos: PDF, Imagens ou Documentos de texto.</div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="mensagem_extra" class="form-label fw-bold">Mensagem Adicional</label>
+                                <textarea class="form-control" id="mensagem_extra" rows="4" placeholder="Conte-nos suas motivações, ideias de projeto ou deixe um recado."></textarea>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-lg btn-primary-custom">Enviar Inscrição</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
