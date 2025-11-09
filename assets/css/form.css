@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #14828F;
@@ -42,40 +40,3 @@ body {
     background-color: rgba(20, 130, 143, 0.05);
 }
 
-.header {
-    background-color: #022132;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 30px;
-    width: 100%;
-}
-
-.logo {
-        display: flex;
-        align-items: center;
-        font-weight: bold;
-}
-
-.logo img {
-    max-height: 100px;
-}
-
-.nav-links{
-
-    color: white;
-    text-decoration: none;
-    margin-left: 30px;
-}
-
-.logo-section {
-        display: flex;
-        justify-content: center; 
-        align-items: center;   
-        font-weight: bold;
-}
-
-.logo-section img {
-        max-height: 300px;
-}
