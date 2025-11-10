@@ -57,7 +57,7 @@ a {
     display: flex; /* (requisito do trabalho) */
     align-items: center;
     justify-content: space-between;
-    padding: 11px 30px;
+    padding: 7px 30px;
     width: 100%; /* (requisito do trabalho) */
 }
 
@@ -85,24 +85,37 @@ a {
  * - 'padding-left' cria a margem à esquerda que você pediu.
  */
 .footer {
-    background-color: #022132; /* Mesma cor do header para consistência */
-    color: #FDCE61; /* Cor de destaque amarela */
-    padding: 20px;
-    padding-left: 40px; /* Sua margem esquerda solicitada */
-    text-align: left; /* Alinha o texto à esquerda */
+    background-color: #022132;
+    color: #FDCE61; 
+    
+    /* MUDANÇA: O 'container-fluid' do HTML agora trata do padding */
+    padding: 20px 0; 
+
     width: 100%;
-    margin-top: auto; /* Empurra o rodapé para o fim da página */
-    border-top: 2px solid #14828F; /* Uma pequena linha divisória */
+    margin-top: auto;
+    border-top: 2px solid #14828F;
 }
 
+/* 2. O seu <p> (corrigido para o texto e links) */
 .footer p {
     margin: 0;
-    font-size: 0.9rem; /* (requisito do trabalho - 'rem') */
+    font-size: 0.9rem;
 }
 
+/* 3. Links da direita (NOVO) */
+.footer a {
+    color: white; /* Cor branca para os links */
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #FDCE61; /* Cor amarela ao passar o rato */
+}
+
+/* 4. A sua <img> (corrigida) */
 .footer img {
-    max-height: 80px; /* <<-- AQUI! Deixamos a imagem menor */
+    max-height: 60px; /* Era 80px */
     width: auto;
-    margin-bottom: 50px;
-    margin-top: 10px;
+    
+    /* MUDANÇA: Trocámos 'margin-bottom' por 'margin-right' */
+    margin-right: 1.5rem; 
 }
