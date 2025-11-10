@@ -139,7 +139,7 @@
     background-color: #ffffff;
     color: #333; 
     font-weight: 500; /*grossura da letra*/
-    height: 175px; /*tamanho da caixa aberta*/
+    min-height: 175px; /*tamanho da caixa aberta*/
 }
 
 /*Imagens em parceiros*/
