@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => { //Espera a página HTML ca
                 rangeInput.disabled = false;
             } else {
                 rangeInput.disabled = true; 
-                rangeInput.value = 2; // Coloca o valor do range no meio
+                rangeInput.value = 0; // Coloca o valor do range no meio
             }
         });
     });
