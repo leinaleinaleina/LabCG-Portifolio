@@ -13,22 +13,24 @@
     <!-- Arquivo CSS próprio -->
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/index.css"> 
-    <link rel="stylesheet" href="assets/css/form.css"> 
 
     <title>Trabalho de TDS - pagina inicial</title>
 </head>
 <body>
     <header class = "header">
+        
         <div class = "logo">
             <a href = "index.html">
             <img src = "assets/img/LabCG.png" alt = "logo lab">
             </a>
         </div>
 
+        <navbar>
         <div class = "nav-links">
             <a href = "#" class = "nav-links">Portifólio</a>
             <a href = "form.html" class = "nav-links">Contato</a>
         </div>
+        </navbar>
     </header>
 <main> 
     <section>
@@ -47,36 +49,80 @@
         </div>
     </section>
 
-    <section>
-        <div class = "light-section">
-            <h1>Área de atuação</h1>
+    <section class="light-section">
+        <h1 class="pb-4">Área de atuação</h1>
 
-          <div class="atuacao">
-  <div class="row row-cols-2 justify-content-center">
+      <div class="atuacao">
+        
+        <div class="accordion" id="accordionAtuacao">
 
-    <div class="col text-center">
-      <img src="assets/img/statistics.png" class="img-fluid" alt="Visão Computacional">
-      <p>Visão Computacional</p>
-    </div>
+            <div class="row row-cols-sm-1 row-cols-md-2 justify-content-center g-4">
 
-    <div class="col text-center">
-      <img src="assets/img/ai-assistant.png" class="img-fluid" alt="Inteligência Artificial">
-      <p>Inteligência Artificial</p>
-    </div>
-
-    <div class="col text-center">
-      <img src="assets/img/meta.png" class="img-fluid" alt="Realidade Estendida">
-      <p>Realidade Estendida</p>
-    </div>
-
-    <div class="col text-center">
-      <img src="assets/img/blind.png" class="img-fluid" alt="Acessibilidade">
-      <p>Acessibilidade</p>
-    </div>
-
-  </div>
-</div>
-    </section>
+                <div class="col">
+                    <div class="accordion-item atuacao-accordion-item">
+                        <h2 class="accordion-header" id="headingUm">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUm" aria-expanded="false" aria-controls="collapseUm">
+                                <img src="assets/img/statistics.png" class="atuacao-accordion-icon" alt="Visão Computacional">
+                                <span>Visão Computacional</span>
+                            </button>
+                        </h2>
+                        <div id="collapseUm" class="accordion-collapse collapse" aria-labelledby="headingUm" data-bs-parent="#accordionAtuacao">
+                            <div class="accordion-body">
+                                <strong>Visão Computacional:</strong> Permite que máquinas e sistemas interpretem e compreendam o conteúdo de imagens e vídeos digitais.
+                                Nosso Laboratório desenvolve sistemas para obter, processar e interpretar informações visuais de imagens e vídeos, capacitando máquinas a "enxergar" e reconhecer objetos no ambiente.
+                            </div>
+                        </div>
+                    </div>
+                </div> <div class="col">
+                    <div class="accordion-item atuacao-accordion-item">
+                        <h2 class="accordion-header" id="headingDois">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDois" aria-expanded="false" aria-controls="collapseDois">
+                                <img src="assets/img/ai-assistant.png" class="atuacao-accordion-icon" alt="Inteligência Artificial">
+                                <span>Inteligência Artificial</span>
+                            </button>
+                        </h2>
+                        <div id="collapseDois" class="accordion-collapse collapse" aria-labelledby="headingDois" data-bs-parent="#accordionAtuacao">
+                            <div class="accordion-body">
+                                <strong>Inteligência Artificial:</strong>É a ciência que cria máquinas capazes de simular a inteligência e o raciocínio humanos para resolver problemas.
+                                Usamos algoritmos para desenvolver sistemas que podem simular o raciocínio humano e tomada de decisões.
+                            </div>
+                        </div>
+                    </div>
+                </div> <div class="col">
+                    <div class="accordion-item atuacao-accordion-item">
+                        <h2 class="accordion-header" id="headingTres">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
+                                <img src="assets/img/meta.png" class="atuacao-accordion-icon" alt="Realidade Estendida">
+                                <span>Realidade Estendida</span>
+                            </button>
+                        </h2>
+                        <div id="collapseTres" class="accordion-collapse collapse" aria-labelledby="headingTres" data-bs-parent="#accordionAtuacao">
+                            <div class="accordion-body">
+                                <strong>Realidade Estendida:</strong> É o termo que engloba as tecnologias imersivas, como Realidade Virtual, Aumentada e Mista.
+                                Desenvolvemos experiências imersivas que combinam ou fundem os mundos real e virtual, através de tecnologias como Realidade Virtual, Aumentada e Mista,
+                                que contribuem pra comunidade.
+                            </div>
+                        </div>
+                    </div>
+                </div> <div class="col">
+                    <div class="accordion-item atuacao-accordion-item">
+                        <h2 class="accordion-header" id="headingQuatro">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuatro" aria-expanded="false" aria-controls="collapseQuatro">
+                                <img src="assets/img/blind.png" class="atuacao-accordion-icon" alt="Acessibilidade">
+                                <span>Acessibilidade</span>
+                            </button>
+                        </h2>
+                        <div id="collapseQuatro" class="accordion-collapse collapse" aria-labelledby="headingQuatro" data-bs-parent="#accordionAtuacao">
+                            <div class="accordion-body">
+                                <strong>Acessibilidade:</strong> É o princípio de projetar produtos e serviços para que possam ser utilizados por pessoas com deficiência de forma plena.
+                                Criamos e ajustamos produtos e tecnologias para que possam ser utilizados e compreendidos por todas as pessoas, independentemente de suas habilidades ou deficiências.
+                            </div>
+                        </div>
+                    </div>
+                </div> </div> </div> 
+            </div>
+    
+</section>
 
     <section>
 
@@ -109,61 +155,55 @@
                             <img src = "assets/img/UF-logo.png" class="img-fluid" alt = "pti">
                         </a>
                     </div>
-
-                    <div class="col-auto text-center">
-                        <a target = "_blank" href = "https://www.unioeste.br/">
-                            <img src = "assets/img/Logo_unioeste.png" class="img-fluid" alt = "pti">
-                        </a>
-                    </div>
                 </div>
             </div>    
         </div>
     </section>
 
-    <section class = "light-section">
-        <h1>Projetos</h1>
+    <section class="light-section">
+    <h1 class="pb-4">Publicações acadêmicas</h1>
 
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 justify-content-center g-4">
 
-    <div class="atuacao">
-        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col text-start">
+                
+                <p>Últimas pesquisas:</p>
+                <ul>
+                    <a target = "_blank" href = "https://sol.sbc.org.br/index.php/sbgames_estendido/article/view/37136">Jogo Sério para Educação Alimentar e Nutricional Infantil</a>
+                    <p>Carlos Penteado, Maria Eduarda Ruzin, Thaynara de Jesus, Daniela Bernardi, Mariana Cavagnari, Fabiana Peres, Claudio Maurício</p>
+                    
+                    <a target = "_blank"  href = "https://link.springer.com/chapter/10.1007/978-3-032-04999-5_36">What if We Could Trick Meta Quest 3 Hand Tracking System to Enable Low Limb Tracking with No Additional Sensors?</a>
+                    <p>Gustavo Domingues, Leina Yoshida, Fabiana Peres, Claudio Mauricio, João Teixeira</p>
 
-            <div class="text-center">
-                <img src="" class="img-fluid" alt="Projetos de TCC">
+                    <a target = "_blank" href = "https://sol.sbc.org.br/index.php/latinoware/article/view/31521">Head-Mounted Displays e IA para Acessibilidade: Ferramentas de Inclusão Sensorial</a>
+                    <p>Leina Yoshida, Gustavo Camargo Domingues, Fabiana Frata Furlan Peres, Claudio Roberto Marquetto Mauricio</p>
+                </ul>
             </div>
 
-            <div class="text-center">
-                <img src="" class="img-fluid" alt="NarraAI">
-            </div>
-
-            <div class="text-center">
-                <img src="" class="img-fluid" alt="Geoconnect">
-            </div>
-            
-            <div class="text-center">
-                <img src="" class="img-fluid" alt="Projetos de IC">
+            <div class="col">
+                <img src="assets/img/statistics.png" class="img-fluid" alt="Gráfico de Publicações">
             </div>
 
         </div>
     </div>
 </section>
-        </div>
-    </section>
 
 
     <section class = "dark-section"> 
         
     </section>
     <a href = "form.html">
-        <div class="d-grid gap-2">
-        <button class = "btn btn-lg btn-primary-custom">Venha fazer parte!</button>
-        </div>
+        <button class = "button-contato">Venha fazer parte!</button>
     </a>
     </section>
 
     <footer class="footer">
+     <img src = "assets/img/Logo_unioeste.png" class="img-fluid" alt = "lapis">
     <p>LabCG - Laboratório de Computação Gráfica.</p>
     <p>&copy; 2025. Universidade Estadual do Oeste do Paraná.</p>
-</footer>
+
+    </footer>
 </main>
 </body>
 </head>

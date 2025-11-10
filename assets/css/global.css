@@ -41,6 +41,11 @@ img {
     display: block;
 }
 
+a {
+    color: #022132;
+    text-decoration: none;
+}
+
 /* --- Cabeçalho (Header) --- */
 /* * Estilos copiados do seu 'index.css' e 'form.css'.
  * Serão usados em todas as páginas.
@@ -52,7 +57,7 @@ img {
     display: flex; /* (requisito do trabalho) */
     align-items: center;
     justify-content: space-between;
-    padding: 12px 30px;
+    padding: 11px 30px;
     width: 100%; /* (requisito do trabalho) */
 }
 
@@ -93,4 +98,11 @@ img {
 .footer p {
     margin: 0;
     font-size: 0.9rem; /* (requisito do trabalho - 'rem') */
+}
+
+.footer img {
+    max-height: 80px; /* <<-- AQUI! Deixamos a imagem menor */
+    width: auto;
+    margin-bottom: 50px;
+    margin-top: 10px;
 }

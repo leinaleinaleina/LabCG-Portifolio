@@ -9,7 +9,7 @@
     max-height: 300px;
 }
 
-.light-section, .HOME {
+.HOME {
     position: relative; 
     text-align: center;
     flex-direction: column; 
@@ -22,6 +22,17 @@
     padding: 50px 40px; 
 }
 
+/* 2. Regra SÓ PARA O .light-section (SEM flex) */
+/* ISTO VAI CORRIGIR A SUA IMAGEM */
+.light-section {
+    position: relative; 
+    text-align: center; /* Centra o H1 */
+    color: white;
+    background-color: #14828F;
+    width: 100%;                 
+    padding: 50px 40px; 
+}
+
 .light-section h1 {
     justify-content: center; 
     align-items: center;   
@@ -29,6 +40,21 @@
     background-color: #14828F;
     color: #FDCE61;
     display: flex;
+}
+
+.light-section ul {
+    list-style-position: inside; /* Coloca os marcadores dentro da caixa */
+    padding-left: 0; /* Remove o padding padrão da lista */
+}
+
+.light-section ul li {
+    margin-bottom: 0.5rem; /* Um pequeno espaço entre os itens */
+}
+
+.light-section img {
+
+    margin-left: 20%;
+    height: 60%;
 }
 
 .dark-section {
@@ -52,6 +78,7 @@
 }
 
 .dark-section p {
+
     margin-bottom: 40px;
 }
 
@@ -67,22 +94,95 @@
 
 .atuacao {
     font-size: 1.25rem;  /* opcional, só pra manter tamanho de texto */
+    margin-bottom: 500px;
     font-weight: bold;
     text-align: center;
+    display: inline-block;
 }
-
-.atuacao img {
-    max-width: 7rem;      /* ~112 px se 1rem = 16px */
+.atuacao-accordion-icon {
+    max-width: 4rem;  /* (usando 'rem') */
     height: auto;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
+    margin-right: 1em; /* Espaço entre ícone e texto (usando 'em') */
 }
 
+/* * Customiza o 'item' (a caixinha inteira) do accordion 
+ * para ter a borda azul que você queria.
+ */
+.atuacao-accordion-item {
+    /* Sobrepõe a borda padrão do Bootstrap com a nossa */
+    border: 3px solid #022132 !important; 
+    border-radius: 0.5em; /* Borda arredondada (com 'em') */
+    overflow: hidden; /* Garante que o conteúdo não vaze das bordas */
+}
+
+/* * Esta é a parte mais importante: o botão clicável (cabeçalho).
+ * Aplicamos o fundo branco e o texto azul aqui.
+ */
+.accordion-button {
+    background-color: #ffffff !important; /* Fundo branco */
+    color: #022132 !important;           /* Texto azul */
+    font-size: 1.25rem; /* Mesmo tamanho da fonte do .atuacao */
+    font-weight: 600;   /* Texto em negrito */
+    
+    /* Remove a sombra padrão do Bootstrap ao focar */
+    box-shadow: none !important; 
+}
+
+/* * Estilo do botão quando o accordion está FECHADO (padrão)
+ * (O 'collapsed' é adicionado/removido pelo JS do Bootstrap)
+ */
+.accordion-button.collapsed {
+    background-color: #ffffff !important;
+    color: #022132 !important;
+}
+
+/* * O ícone da SETA (feita com CSS pelo Bootstrap)
+ * Vamos garantir que ela fique com a cor azul.
+ */
+.accordion-button::after {
+    /* O Bootstrap usa 'filter' para mudar a cor do SVG da seta. 
+       Este valor de 'filter' gera a cor azul #022132 */
+    filter: invert(12%) sepia(35%) saturate(3333%) hue-rotate(170deg) brightness(97%) contrast(97%);
+}
+
+/* * O corpo/conteúdo da descrição.
+ * Fundo branco e texto escuro.
+ */
+.accordion-body {
+    background-color: #ffffff;
+    color: #333; /* Um cinza escuro para o texto, para diferenciar do título */
+    font-weight: 500;
+}
 .parceiros img{
-    height: 80px;
+    height: 20px;
     width: auto; 
     display: flex;
     margin-top: 80px;   
     margin-bottom: 80px;
     flex-direction: column;
+
+    height: 80px; /* Define a altura fixa (px) */
+    width: auto;  /* Largura automática para não distorcer */
+    
+    /* Espaçamento (em vez de 80px, usamos 'rem' que é melhor) */
+    margin-top: 2rem;   
+    margin-bottom: 2rem;
 }
+
+.button-contato {
+    /* --- Adicionado para Centralizar --- */
+    display: block;         /* Faz o botão se comportar como um bloco */
+    margin-left: auto;      /* Margem automática para a esquerda */
+    margin-right: auto;     /* Margem automática para a direita */
+    width: 100%;
+    max-width: 300px;     /* O botão terá no máximo 300px de largura */
+    padding: 12px;
+    border: none;
+    text-align: center;  
+    color: white;
+    background-color: #14828F; /* A cor que você definiu */
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
