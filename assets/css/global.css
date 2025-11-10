@@ -42,7 +42,7 @@ a {
     color: white;
     display: flex; 
     align-items: center; /*alinha os itens no centro*/
-    justify-content: space-between; /*coloca os textos no extremo da página*/
+    justify-content: space-between; /*coloca os textos com espaço entre eles*/
     padding: 7px 30px; /*altura e largura do navbar*/
     width: 100%; 
 }

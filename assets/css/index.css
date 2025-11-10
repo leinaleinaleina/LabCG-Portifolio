@@ -1,203 +1,186 @@
+  /*Arquivo para manipulação de estilos -> "index.html"*/
+
+/*Posição da imagem de HOME*/
 .logo-section {
     display: flex;
-    justify-content: center; 
-    align-items: center;   
-    font-weight: bold;
+    justify-content: center; /*Centraliza o conteúdo vertical*/
+    align-items: center;   /*Centraliza o conteúdo horizontal*/
+    font-weight: bold; /*Deixa destacado*/
 }
 
 .logo-section img {
-    max-height: 300px;
+    max-height: 300px; /*tamanho máximo*/
 }
 
+/*Seção HOME ao abrir a página*/
 .HOME {
-    position: relative; 
-    text-align: center;
-    flex-direction: column; 
+    position: relative; /*posiciona sem alterar o layout*/
+    text-align: center; /*centraliza o texto no centro*/
+    flex-direction: column; /*empilha verticalmente*/
     color: white;
     background-color: #14828F;
-    display: flex;
-    justify-content: center; 
-    font-size: 50px;
-    align-items: center;   
-    width: 100%;                 
-    padding: 120px 50px; 
+    display: flex; 
+    justify-content: center; /*centraliza na vertical*/
+    font-size: 50px; /*tamanho das letras*/
+    align-items: center;   /*centraliza na horizontal*/
+    width: 100%;  /*ocupa 100% da sua largura*/               
+    padding: 120px; /*altura da seção*/
 }
 
-/* 2. Regra SÓ PARA O .light-section (SEM flex) */
-/* ISTO VAI CORRIGIR A SUA IMAGEM */
+/*seções claras exceto HOME*/
 .light-section {
     position: relative; 
-    text-align: center; /* Centra o H1 */
+    text-align: center; /*centraliza o texto*/
     color: white;
     background-color: #14828F;
-    width: 100%;                 
-    padding: 50px 40px; 
+    width: 100%;  /*ocupa 100% da sua largura*/                
+    padding: 50px; /*altura da seção*/
+    position: relative; /*posiciona sem alterar o layout*/
 }
 
+/*Titulo da seção*/
 .light-section h1 {
-    justify-content: center; 
-    align-items: center;   
-    margin-top: 20px;
+    justify-content: center; /*centraliza na vertical*/
+    align-items: center;   /*centraliza na horizontal*/
+    margin-top: 20px; /*margem no topo*/
     background-color: #14828F;
-    padding: 10px;
     color: #FDCE61;
     display: flex;
 }
 
+/*Titulo da seção*/
 .light-section h4 {
     color: #FDCE61;
 }
 
+/*Lista da seção*/
 .light-section ul {
-    list-style-position: inside; /* Coloca os marcadores dentro da caixa */
-    padding-left: 0; /* Remove o padding padrão da lista */
+    list-style-position: inside; /*coloca os elementos dentro da lista */
+    padding-left: 0; /*remove o padding da lista */
 }
 
+/*elementos da lista*/
 .light-section ul li {
-    margin-bottom: 0.5rem; /* Um pequeno espaço entre os itens */
+    margin-bottom: 0.5rem; /*coloca um pequeno espaço entre os elementos*/
 }
 
-.light-section img {
-
-    margin-left: 20%;
-    height: 60%;
-}
-
+/*Seções escuras*/
 .dark-section {
     display: flex;
-    flex-direction: column;  /* Empilha os itens (um em cima do outro) */
-    align-items: center;     /* Centraliza na HORIZONTAL */
-    justify-content: center; /* Centraliza na VERTICAL */
-    width: 100%;                 
-    padding: 70px 40px; 
+    flex-direction: column;  /*empilha na vertical*/
+    align-items: center;     /*centraliza na horizontal */
+    justify-content: center; /*centraliza na vertical */
+    width: 100%;  /*ocupa 100% de sua largura*/               
+    padding: 70px; /*altura da seção*/ 
     background-color: #022132;
     color: white;
-    position: relative;
-    
+    position: relative; /*posiciona sem alterar o layout*/
 }
 
+/*Titulo da seção*/
 .dark-section h1 {
-    align-items: center;
-    text-align: center;
-    margin-top: 50px;
+    align-items: center; /*centraliza na horizontal*/
+    text-align: center; /*centraliza na vertical*/
+    margin-top: 50px; /*margem ao topo*/
     color: #FDCE61;
 }
 
+/*Texto da seção*/
 .dark-section p {
-
-    margin-bottom: 40px;
+    margin-bottom: 40px; /*margem debaixo*/
 }
 
-.forms {
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-};
-
-.forms label {
-    color: white;  
-};
-
+/*seção da área de atuação*/
 .atuacao {
-    font-size: 1.25rem;  /* opcional, só pra manter tamanho de texto */
-    margin-bottom: 500px;
-    font-weight: bold;
-    text-align: center;
-    display: inline-block;
+    font-size: 1.25rem;  /*Alteração no tamanho da fonte para mais destaque*/
+    font-weight: bold; /*destaca o texto*/
+    text-align: center; /*alinha o texto horizontalmente*/
 }
+
+/*icone do accordion*/
 .atuacao-accordion-icon {
-    max-width: 4rem;  /* (usando 'rem') */
-    height: auto;
-    margin-right: 1em; /* Espaço entre ícone e texto (usando 'em') */
+    max-width: 4rem; /*tamanho responsivo*/
+    height: auto; /*altura automatizada pra não ter distorção*/
+    margin-right: 1em; /*tamanho responsivo*/
 }
 
-/* * Customiza o 'item' (a caixinha inteira) do accordion 
- * para ter a borda azul que você queria.
- */
+/*accordion da seção*/
 .atuacao-accordion-item {
-    /* Sobrepõe a borda padrão do Bootstrap com a nossa */
-    border: 3px solid #022132 !important; 
-    border-radius: 0.5em; /* Borda arredondada (com 'em') */
-    overflow: hidden; /* Garante que o conteúdo não vaze das bordas */
+    border: 3px solid #022132 !important; /*sobrepõe a borda*/ 
+    border-radius: 0.5em; /*suaviza a borda*/
+    overflow: hidden; /* garante que não transborde*/
 }
 
-/* * Esta é a parte mais importante: o botão clicável (cabeçalho).
- * Aplicamos o fundo branco e o texto azul aqui.
- */
+/*botão do accordion*/
 .accordion-button {
-    background-color: #ffffff !important; /* Fundo branco */
-    color: #022132 !important;           /* Texto azul */
-    font-size: 1.25rem; /* Mesmo tamanho da fonte do .atuacao */
-    font-weight: 600;   /* Texto em negrito */
-    
-    /* Remove a sombra padrão do Bootstrap ao focar */
-    box-shadow: none !important; 
+    background-color: #ffffff !important; /*Sobrepõe para fundo branco*/
+    color: #022132 !important;           /*Sobrepõe para texto escuro*/
+    font-size: 1.25rem; /*Alteração no tamanho da fonte para mais destaque*/
+    font-weight: 600;   /*Texto em negrito*/
+    box-shadow: none !important; /* remove a sombra padrão do Bootstrap ao focar*/
+    min-width: 100px; /*tamanho uniforme*/
 }
 
-/* * Estilo do botão quando o accordion está FECHADO (padrão)
- * (O 'collapsed' é adicionado/removido pelo JS do Bootstrap)
- */
+/*botão quando o accordion está fechado*/
 .accordion-button.collapsed {
-    background-color: #ffffff !important;
-    color: #022132 !important;
+    background-color: #ffffff !important; /*Sobrepõe para fundo branco*/
+    color: #022132 !important;           /*Sobrepõe para texto escuro*/
 }
 
-/* * O ícone da SETA (feita com CSS pelo Bootstrap)
- * Vamos garantir que ela fique com a cor azul.
- */
+/*seta do accordion*/
 .accordion-button::after {
-    /* O Bootstrap usa 'filter' para mudar a cor do SVG da seta. 
-       Este valor de 'filter' gera a cor azul #022132 */
+    /*Filter muda a cor da seta*/
+    justify-content: right;
     filter: invert(12%) sepia(35%) saturate(3333%) hue-rotate(170deg) brightness(97%) contrast(97%);
 }
 
-/* * O corpo/conteúdo da descrição.
- * Fundo branco e texto escuro.
- */
+/*o conteúdo do accordion*/
 .accordion-body {
     background-color: #ffffff;
-    color: #333; /* Um cinza escuro para o texto, para diferenciar do título */
-    font-weight: 500;
-    height: 175px;
+    color: #333; 
+    font-weight: 500; /*grossura da letra*/
+    height: 175px; /*tamanho da caixa aberta*/
 }
+
+/*Imagens em parceiros*/
 .parceiros img {
-    height: 80px; /* Define a altura fixa para TODOS os logos */
-    width: auto;  /* Largura automática para não distorcer */
-    
-    /* Espaçamento (o 'col-auto' do Bootstrap trata do alinhamento) */
-    margin-top: 2rem;   
-    margin-bottom: 2rem;
-    
-    /* Opcional: Adiciona um espaço dos lados */
-    margin-left: 1rem;
-    margin-right: 1rem;
+    display: inline-block;     
+    vertical-align: middle; /*alinha as logos na horizontal*/
+    height: 80px; /*altura fixa*/
+    width: auto;  /* largura automática para não distorcer */
+    margin-top: 2rem;   /*tamanho responsível*/
+    margin-bottom: 2rem; /*tamanho responsível*/
+    margin-left: 1rem; /*tamanho responsível*/
+    margin-right: 1rem; /*tamanho responsível*/
 }
 
+/*imagem específica que utiliza parceiros como classe e precisa de modificações*/
 .parceiros img[src*="UF-logo.png"] {
-    width: 250px; 
-    height: auto;
-    margin-top: 50px;
+    width: 250px; /*largura*/
+    height: auto; /*altura automatizada pra não distorcer*/
+    margin-top: 50px; /*margem do topo*/
 }
 
+/*imagem de publicações*/
 .publicacoes img{
-    border-radius: 15px;
-    margin-top: 10px;
-    height: auto;
-    width: auto;
+    border-radius: 15px; /*suaviza a borda*/
+    margin-top: 10px; /*margem ao topo para centralizar*/
+    height: auto; /*altura automatizada pra manter a imagem original*/
+    width: auto; /*largura automatizada pra manter a imagem original*/
 
 }
 
+/*botão de contato*/
 .button-contato {
-    display: block;         /* Faz o botão se comportar como um bloco */
-    margin-left: 0px;      /* Margem automática para a esquerda */
-    margin-right: auto;     /* Margem automática para a direita */
-    width: 100%;
-    max-width: 300px;     /* O botão terá no máximo 300px de largura */
-    padding: 12px;
-    text-align: center;  
+    display: block;        
+    margin-left: auto;      /*margem para a esquerda */
+    margin-right: auto;     /*margem para a direita */
+    width: 100%;            /*ocupa 100% de sua largura*/
+    max-width: 300px;     /* largura */
+    padding: 12px;        /*altura*/
+    text-align: center;  /*centraliza o texto*/
     color: white;
-    background-color: #14828F; /* A cor que você definiu */
-    margin-bottom: 15px;
-    cursor: pointer;
+    background-color: #14828F;
+    margin-bottom: 15px; /*margem abaixo*/
+    cursor: pointer; /*elemento clicável*/
 }
-
