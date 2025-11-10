@@ -1,4 +1,4 @@
-// --- REQUISITO: ARRAYS E OBJETOS ---
+// Array de publicações com objetos que detalham dados sobre as publicações
 const publicacoes = [
     {
         titulo: "Head-Mounted Displays e IA para Acessibilidade: Ferramentas de Inclusão Sensorial",
@@ -20,17 +20,19 @@ const publicacoes = [
     }
 ];
 
-
+// Função para "renderizar" as publicações na página 
 const renderizarPublicacoes = function() {
     const listaElemento = document.getElementById('lista-publicacoes');
 
-    if (!listaElemento) return;
+    if (!listaElemento) return; // Se não achar o elemento, evita erros
 
-    publicacoes.sort((a, b) => new Date(b.data) - new Date(a.data));
+    // Função arrow para ordenar publicações de forma decrescente
+    publicacoes.sort((a, b) => new Date(b.data) - new Date(a.data)); 
 
+    // Para cada publicação, criar um elemento html para a lista
     publicacoes.forEach(pub => {
         const itemLista = document.createElement('li');
-        itemLista.className = "mb-4";
+        itemLista.className = "mb-4"; // Classe de margem de baixo do Bootstrap
 
         itemLista.innerHTML = `
             <a target="_blank" href="${pub.link}" class="fw-bold text-decoration-none" style="color: #022132;">
@@ -44,9 +46,11 @@ const renderizarPublicacoes = function() {
                 Publicado em: ${new Date(pub.data).toLocaleDateString('pt-BR')}
             </small>
         `;
-
+        
+        // Adiciona o item recém-criado dentro da lista <ul>
         listaElemento.appendChild(itemLista);
     });
 };
 
+// Chamada direta da função.
 renderizarPublicacoes();
