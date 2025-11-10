@@ -44,6 +44,10 @@
     display: flex;
 }
 
+.light-section h4 {
+    color: #FDCE61;
+}
+
 .light-section ul {
     list-style-position: inside; /* Coloca os marcadores dentro da caixa */
     padding-left: 0; /* Remove o padding padrão da lista */
@@ -173,6 +177,14 @@
     width: 250px; 
     height: auto;
     margin-top: 50px;
+}
+
+.publicacoes img{
+    border-radius: 15px;
+    margin-top: 10px;
+    height: auto;
+    width: auto;
+
 }
 
 .button-contato {

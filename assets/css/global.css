@@ -1,121 +1,100 @@
-/* ========================================
-   ARQUIVO GLOBAL DE ESTILOS - LabCG
-   Este arquivo contém estilos que são
-   compartilhados por todas as páginas do site,
-   como o cabeçalho (header), rodapé (footer)
-   e estilos base (body).
-   ========================================
-*/
+/*Arquivo global para manipulações de cabeçalhos e rodapés -> "index.html" e "form.html"*/
+/*Arquivo padrão CSS*/
 
-/* --- Estilos Base (Reset e Padrões) --- */
-/* * Importa a fonte Poppins que você já estava usando.
- * É bom manter as importações globais aqui.
- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*import de uma fonte de letras externa*/
 
-/* * Define padrões para todo o site.
- * - 'box-sizing' facilita o controle de tamanhos.
- * - Define a fonte padrão (Poppins) para todo o corpo.
- * - Define a cor de fundo padrão e a cor do texto.
- * - Garante que o body ocupe 100% da altura da tela.
- */
+
+/*CSS padrão da página*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /*espaçamento entre linhas*/
+    padding: 0; /*remove o espaçamento interno, fazendo que encaixe perfeitamente na tela*/
+    box-sizing: border-box; /*tamanho fixo*/
 }
 
+/*CSS padrão da página*/
 body {  
-    font-family: 'Poppins', sans-serif; /* Fonte padrão */
-    font-size: 1rem; /* Tamanho de fonte base (requisito do trabalho) */
-    color: white; /* Cor do texto padrão */
-    background-color: #022132; /* Cor de fundo padrão */
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1rem; /*tamanho adaptável para responsividade*/
+    color: white; 
+    background-color: #022132; 
     min-height: 100vh; /* Altura mínima de 100% da tela */
-    display: flex; /* (requisito do trabalho) */
-    flex-direction: column;
+    display: flex; 
+    flex-direction: column; /*direção em colunas*/
 }
 
+/*CSS padrão de imagem da página*/
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    max-width: 100%; /*ocupa 100% da imagem*/
+    height: auto; /*altura automática para não ter distorção*/
+    display: block; /*display block para não ter manipulação de posição*/
 }
 
+/*CSS padrão de links da página*/
 a {
     color: #022132;
-    text-decoration: none;
+    text-decoration: none; /*elimina o sublinhado em links*/
 }
 
-/* --- Cabeçalho (Header) --- */
-/* * Estilos copiados do seu 'index.css' e 'form.css'.
- * Serão usados em todas as páginas.
- * 'display: flex' é usado para alinhar a logo e os links (requisito do trabalho).
- */
+/*cabeça~ho CSS padrão*/
 .header {
     background-color: #022132;
     color: white;
-    display: flex; /* (requisito do trabalho) */
-    align-items: center;
-    justify-content: space-between;
-    padding: 7px 30px;
-    width: 100%; /* (requisito do trabalho) */
+    display: flex; 
+    align-items: center; /*alinha os itens no centro*/
+    justify-content: space-between; /*coloca os textos no extremo da página*/
+    padding: 7px 30px; /*altura e largura do navbar*/
+    width: 100%; 
 }
 
+/*formato da logo padrão dentro do cabeçalho*/
 .logo {
     display: flex;
-    align-items: center;
-    font-weight: bold;
+    align-items: center; /*alinha a logo no centro*/
 }
 
+/*formato da logo padrão dentro do cabeçalho*/
 .logo img {
-    max-height: 100px;
+    max-height: 100px; /*altura máxima da imagem*/
 }
 
+/*CSS para referências a outros html's padrão*/
 .nav-links{
     color: white;
-    text-decoration: none;
-    margin-left: 30px;
+    text-decoration: none; /*elimina o sublinhado das referências*/
+    margin-left: 30px; /*espaçamento da esquerda*/
 }
 
-
-/* --- Rodapé (Footer) --- */
-/* * Este é o novo rodapé (footer) que você solicitou.
- * - 'margin-top: auto' é um truque com flexbox (do body)
- * para empurrar o rodapé para o final da página.
- * - 'padding-left' cria a margem à esquerda que você pediu.
- */
+/*CSS para rodapés padrão*/
 .footer {
     background-color: #022132;
     color: #FDCE61; 
-    
-    /* MUDANÇA: O 'container-fluid' do HTML agora trata do padding */
-    padding: 20px 0; 
-
-    width: 100%;
-    margin-top: auto;
-    border-top: 2px solid #14828F;
+    padding: 20px; /*tamanho do rodapé*/
+    width: 100%; /*Ocupa 100% da tela*/
+    margin-top: auto; /*margem automatizada para a centralização e responsividade*/
+    border-top: 3px solid #14828F; /*borda do topo*/
 }
 
-/* 2. O seu <p> (corrigido para o texto e links) */
+/*CSS para textos em rodapés padrão*/
 .footer p {
-    margin: 0;
-    font-size: 0.9rem;
+    margin: 0; /*espaçamento entre linhas*/
+    font-size: 0.9rem; /*tamanho adaptável para ser responsivo*/
 }
 
-/* 3. Links da direita (NOVO) */
+/*CSS para links em rodapés padrão*/
 .footer a {
-    color: white; /* Cor branca para os links */
-    text-decoration: none;
-}
-.footer a:hover {
-    color: #FDCE61; /* Cor amarela ao passar o rato */
+    color: white; 
+    text-decoration: none; /*Elimina sublinhados de links*/
 }
 
-/* 4. A sua <img> (corrigida) */
+/*CSS ao apontar o mouse em links do rodapé*/
+.footer a:hover {
+    color: #FDCE61; 
+}
+
+/*CSS para imagens em rodapés padrão*/
 .footer img {
-    max-height: 60px; /* Era 80px */
-    width: auto;
-    
-    /* MUDANÇA: Trocámos 'margin-bottom' por 'margin-right' */
-    margin-right: 1.5rem; 
+    max-height: 60px; /*tamanho da imagem*/
+    width: auto; /*largura automatizada para não distorcer a imagem*/
+    margin-right: 1.5rem; /*margem adaptável e responsiva*/
 }

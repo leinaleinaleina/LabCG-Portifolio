@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <!-- Bootstrap -->
+
+       <!-- Conexão Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <!-- Ícones -->
+    <!-- Conexão de Ícones -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Arquivo CSS próprio -->
+    <!-- Arquivo CSS's -->
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/index.css"> 
 
-    <!-- JavaScript -->
+    <!-- Arquivo JavaScript -->
     <script src="assets/js/index.js" defer></script>
 
     <title>Trabalho de TDS - pagina inicial</title>
@@ -23,7 +24,7 @@
     <header class = "header">
         
         <div class = "logo">
-            <a href = "index.html">
+            <a href = "index.html"> <!--Endereça a página inicial ao ícone-->
             <img src = "assets/img/LabCG.png" alt = "logo lab">
             </a>
         </div>
@@ -35,199 +36,199 @@
         </div>
         </navbar>
     </header>
-<main> 
-    <section>
-        <div class = "HOME" style = "flex-direction: column;">
-            <div class = "logo-section">
-                <img src = "assets/img/LabCG.png" alt = "logo">
-            </div>
-                <p>Pela ciência!</p>
-        </div>
-    </section>
 
-    <section>
-        <div class="dark-section">
-            <div class="container">
-                <div class="row align-items-center py-5">
-                    <div class="col-md-5 text-center text-md-start mb-4 mb-md-0">
-                        <h1 class="m-0">Nossa Missão</h1>
+    
+    <main> 
+        <section>
+            <div class = "HOME">
+                <div class = "logo-section">
+                    <img src = "assets/img/LabCG.png" alt = "logo">
+                </div>
+                    <p>Pela ciência!</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="dark-section">
+                <div class="container">
+                    <div class="row align-items-center py-5">
+                        <div class="col-md-5 text-center text-md-start mb-4 mb-md-0">
+                            <h1 class="m-0">Nossa Missão</h1>
+                        </div>
+                        <div class="col-md-7">
+                            <p class="texto-justificado m-0" style="font-size: large;">
+                                Dedicamo-nos transformar tecnologias de Inteligência Artificial e Realidade Estendida (XR) em soluções que ampliam a capacidade humana. 
+                                Através da inovação colaborativa, criamos ferramentas que promovem acessibilidade, educação imersiva e eficiência real para a comunidade e a indústria.
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-md-7">
-                        <p class="texto-justificado m-0" style="font-size: large;">
-                            Dedicamo-nos transformar tecnologias de Inteligência Artificial e Realidade Estendida (XR) em soluções que ampliam a capacidade humana. 
-                            Através da inovação colaborativa, criamos ferramentas que promovem acessibilidade, educação imersiva e eficiência real para a comunidade e a indústria.
+                </div>
+            </div>
+        </section>
+
+        <section class="light-section">
+            <h1 class="pb-4">Área de atuação</h1>
+
+            <div class="atuacao">
+            
+            <div class="accordion" id="accordionAtuacao">
+
+                <div class="row row-cols-sm-1 row-cols-md-2 justify-content-center g-4">
+
+                    <div class="col">
+                        <div class="accordion-item atuacao-accordion-item">
+                            <h2 class="accordion-header" id="headingUm">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUm" aria-expanded="false" aria-controls="collapseUm">
+                                    <img src="assets/img/statistics.png" class="atuacao-accordion-icon" alt="Visão Computacional">
+                                    <span>Visão Computacional</span>
+                                </button>
+                            </h2>
+                            <div id="collapseUm" class="accordion-collapse collapse" aria-labelledby="headingUm">
+                                <div class="accordion-body">
+                                    A tecnologia que permite aos sistemas compreenderem o ambiente visual. Nossas soluções capturam e processam dados de imagens para gerar insights instantâneos, aplicados desde a correção de exercícios físicos até a navegação autônoma.
+                                </div>
+                            </div>
+                        </div>
+                    </div> <div class="col">
+                        <div class="accordion-item atuacao-accordion-item">
+                            <h2 class="accordion-header" id="headingDois">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDois" aria-expanded="false" aria-controls="collapseDois">
+                                    <img src="assets/img/ai-assistant.png" class="atuacao-accordion-icon" alt="Inteligência Artificial">
+                                    <span>Inteligência Artificial</span>
+                                </button>
+                            </h2>
+                        <div id="collapseDois" class="accordion-collapse collapse" aria-labelledby="headingDois">
+                                <div class="accordion-body">
+                                    A ciência de tornar máquinas capazes de executar tarefas humanas. Focamos no uso e desenvolvimento de algoritmos que potencializam a eficiência, personalizam experiências e abrem novas fronteiras para a inovação tecnológica.
+                                </div>
+                            </div>
+                        </div>
+                    </div> <div class="col">
+                        <div class="accordion-item atuacao-accordion-item">
+                            <h2 class="accordion-header" id="headingTres">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
+                                    <img src="assets/img/meta.png" class="atuacao-accordion-icon" alt="Realidade Estendida">
+                                    <span>Realidade Estendida</span>
+                                </button>
+                            </h2>
+                            <div id="collapseTres" class="accordion-collapse collapse" aria-labelledby="headingTres">
+                                <div class="accordion-body">
+                                    O termo que engloba todas as tecnologias imersivas (VR, AR, MR). Criamos ambientes sintéticos e interações enriquecidas que servem como poderosas ferramentas para educação, treinamento industrial e engajamento comunitário.
+                                </div>
+                            </div>
+                        </div>
+                    </div> <div class="col">
+                        <div class="accordion-item atuacao-accordion-item">
+                            <h2 class="accordion-header" id="headingQuatro">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuatro" aria-expanded="false" aria-controls="collapseQuatro">
+                                    <img src="assets/img/blind.png" class="atuacao-accordion-icon" alt="Acessibilidade">
+                                    <span>Acessibilidade</span>
+                                </button>
+                            </h2>
+                            <div id="collapseQuatro" class="accordion-collapse collapse" aria-labelledby="headingQuatro">
+                                <div class="accordion-body">
+                                    O princípio fundamental de inclusão pelo design. Desenvolvemos tecnologias assistivas que democratizam o acesso à informação e aos serviços, garantindo que a inovação sirva verdadeiramente a todas as capacidades humanas.
+                                </div>
+                            </div>
+                        </div>
+                    </div> </div> </div> 
+                </div>
+        
+        </section>
+
+        <section>
+
+            <div class = "dark-section">
+                <h1>Nossos parceiros</h1>
+                
+                <div class = "parceiros">
+                    <div class = "row justify-content-center">
+
+                        <div class="col-auto text-center">
+                            <a target = "_blank" href="https://voxarlabs.cin.ufpe.br/">
+                                <img src = "assets/img/logo voxar.png" class="img-fluid" alt = "voxar">
+                            </a>
+                        </div>
+
+                        <div class="col-auto text-center">
+                            <a target = "_blank" href = "https://lapis.each.usp.br/pt/">
+                                <img src = "assets/img/lapis.png" class="img-fluid" alt = "lapis">
+                            </a>
+                        </div>
+
+                        <div class="col-auto text-center">
+                            <a target = "_blank" href = "https://www.itaipuparquetec.org.br/">
+                                <img src = "assets/img/itaipuparquetec.png" class="img-fluid" alt = "pti">
+                            </a>
+                        </div>
+
+                        <div class="col-auto text-center">
+                            <a target = "_blank" href = "https://www.ufl.edu/">
+                                <img src = "assets/img/UF-logo.png" class="img-fluid" alt = "pti">
+                            </a>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+
+        <section class="light-section">
+        <h1 class="pb-4">Publicações acadêmicas</h1>
+
+        <div class="container">
+            <div class="row justify-content-center g-4">
+
+                <div class="col-12 col-md-7 text-start">
+                        <h4 class="mb-3">Últimas pesquisas:</h4>
+                        <ul id="lista-publicacoes" class="list-unstyled">
+                        </ul>
+                </div>
+
+                <div class="col-md-4 d-none d-md-block"> 
+                    <div class = "publicacoes">
+                        <img src="assets/img/Apresentacao.JPG" class="img-fluid"alt="Gráfico de Publicações">
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class = "dark-section"> 
+            <h1>Interessado?</h1>
+            <p>Tem uma ideia ou gostaria de trabalhar conosco? Venha fazer parte do Laboratório e contribuir para a comunidade!</p>
+            <a href = "form.html">
+                <button class = "button-contato">Entre em contato conosco!</button>
+            </a>
+        </section>
+
+        <footer class="footer">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+
+                <div class="col-12 col-md-7 text-center text-md-start">
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                        <img src="assets/img/Logo_unioeste.png" alt="Logo Unioeste">
+                        <div class->
+                            <p>LabCG - Laboratório de Computação Gráfica.</p>
+                            <p>&copy; 2025. Universidade Estadual do Oeste do Paraná.</p>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="col-12 col-md-5 text-center text-md-end">
+                        <p>
+                            <a href="https://www.instagram.com/labcg_unioeste/"><i class="bi bi-instagram"></i> labcg_unioeste</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/LabCG-Unioeste"><i class="bi bi-github"></i> LabCG-Unioeste</a>
                         </p>
                     </div>
+
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="light-section">
-        <h1 class="pb-4">Área de atuação</h1>
-
-      <div class="atuacao">
-        
-        <div class="accordion" id="accordionAtuacao">
-
-            <div class="row row-cols-sm-1 row-cols-md-2 justify-content-center g-4">
-
-                <div class="col">
-                    <div class="accordion-item atuacao-accordion-item">
-                        <h2 class="accordion-header" id="headingUm">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUm" aria-expanded="false" aria-controls="collapseUm">
-                                <img src="assets/img/statistics.png" class="atuacao-accordion-icon" alt="Visão Computacional">
-                                <span>Visão Computacional</span>
-                            </button>
-                        </h2>
-                        <div id="collapseUm" class="accordion-collapse collapse" aria-labelledby="headingUm">
-                            <div class="accordion-body">
-                                A tecnologia que permite aos sistemas compreenderem o ambiente visual. Nossas soluções capturam e processam dados de imagens para gerar insights instantâneos, aplicados desde a correção de exercícios físicos até a navegação autônoma.
-                            </div>
-                        </div>
-                    </div>
-                </div> <div class="col">
-                    <div class="accordion-item atuacao-accordion-item">
-                        <h2 class="accordion-header" id="headingDois">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDois" aria-expanded="false" aria-controls="collapseDois">
-                                <img src="assets/img/ai-assistant.png" class="atuacao-accordion-icon" alt="Inteligência Artificial">
-                                <span>Inteligência Artificial</span>
-                            </button>
-                        </h2>
-                       <div id="collapseDois" class="accordion-collapse collapse" aria-labelledby="headingDois">
-                            <div class="accordion-body">
-                                A ciência de tornar máquinas capazes de executar tarefas humanas. Focamos no uso e desenvolvimento de algoritmos que potencializam a eficiência, personalizam experiências e abrem novas fronteiras para a inovação tecnológica.
-                            </div>
-                        </div>
-                    </div>
-                </div> <div class="col">
-                    <div class="accordion-item atuacao-accordion-item">
-                        <h2 class="accordion-header" id="headingTres">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
-                                <img src="assets/img/meta.png" class="atuacao-accordion-icon" alt="Realidade Estendida">
-                                <span>Realidade Estendida</span>
-                            </button>
-                        </h2>
-                        <div id="collapseTres" class="accordion-collapse collapse" aria-labelledby="headingTres">
-                            <div class="accordion-body">
-                                O termo que engloba todas as tecnologias imersivas (VR, AR, MR). Criamos ambientes sintéticos e interações enriquecidas que servem como poderosas ferramentas para educação, treinamento industrial e engajamento comunitário.
-                            </div>
-                        </div>
-                    </div>
-                </div> <div class="col">
-                    <div class="accordion-item atuacao-accordion-item">
-                        <h2 class="accordion-header" id="headingQuatro">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuatro" aria-expanded="false" aria-controls="collapseQuatro">
-                                <img src="assets/img/blind.png" class="atuacao-accordion-icon" alt="Acessibilidade">
-                                <span>Acessibilidade</span>
-                            </button>
-                        </h2>
-                        <div id="collapseQuatro" class="accordion-collapse collapse" aria-labelledby="headingQuatro">
-                            <div class="accordion-body">
-                                O princípio fundamental de inclusão pelo design. Desenvolvemos tecnologias assistivas que democratizam o acesso à informação e aos serviços, garantindo que a inovação sirva verdadeiramente a todas as capacidades humanas.
-                            </div>
-                        </div>
-                    </div>
-                </div> </div> </div> 
-            </div>
-    
-</section>
-
-    <section>
-
-        <div class = "dark-section">
-            <h1>Nossos parceiros</h1>
-            
-            <div class = "parceiros">
-                <div class = "row justify-content-center">
-
-                    <div class="col-auto text-center">
-                        <a href="https://voxarlabs.cin.ufpe.br/">
-                            <img src = "assets/img/logo voxar.png" class="img-fluid" alt = "voxar">
-                        </a>
-                    </div>
-
-                    <div class="col-auto text-center">
-                        <a target = "_blank" href = "https://lapis.each.usp.br/pt/">
-                            <img src = "assets/img/lapis.png" class="img-fluid" alt = "lapis">
-                        </a>
-                    </div>
-
-                    <div class="col-auto text-center">
-                        <a target = "_blank" href = "https://www.itaipuparquetec.org.br/">
-                            <img src = "assets/img/itaipuparquetec.png" class="img-fluid" alt = "pti">
-                        </a>
-                    </div>
-
-                    <div class="col-auto text-center">
-                        <a target = "_blank" href = "https://www.ufl.edu/">
-                            <img src = "assets/img/UF-logo.png" class="img-fluid" alt = "pti">
-                        </a>
-                    </div>
-                </div>
-            </div>    
-        </div>
-    </section>
-
-    <section class="light-section">
-    <h1 class="pb-4">Publicações acadêmicas</h1>
-
-    <div class="container">
-        <div class="row justify-content-center g-4">
-
-            <div class="col-12 col-md-7 text-start">
-                <h4 class="mb-3" style="color: #FDCE61;">Últimas pesquisas:</h4>
-                <ul id="lista-publicacoes" class="list-unstyled">
-                    </ul>
-            </div>
-
-            <!-- Por padrão a imagem não parece, mas em medium para cima aparece -->
-            <div class="col-md-4 d-none d-md-block"> 
-                <img src="assets/img/Apresentacao.JPG" class="img-fluid" style="width: auto; height: auto; border-radius: 15px;" alt="Gráfico de Publicações">
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-    <section class = "dark-section"> 
-        <h1>Interessado?</h1>
-        <p>Tem uma ideia ou gostaria de trabalhar conosco? Venha fazer parte do Laboratório e contribuir para a comunidade!</p>
-    <a href = "form.html">
-        <button class = "button-contato">Entre em contato conosco!</button>
-    </a>
-    </section>
-
-
-
-    <footer class="footer">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-
-            <div class="col-12 col-md-7 text-center text-md-start">
-                <div class="d-flex align-items-center justify-content-center justify-content-md-start">
-                    <img src="assets/img/Logo_unioeste.png" alt="Logo Unioeste">
-                    <div class->
-                        <p>LabCG - Laboratório de Computação Gráfica.</p>
-                        <p>&copy; 2025. Universidade Estadual do Oeste do Paraná.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-5 text-center text-md-end">
-                <p>
-                    <a href="https://www.instagram.com/labcg_unioeste/"><i class="bi bi-instagram"></i> labcg_unioeste</a>
-                </p>
-                <p>
-                    <a href="https://github.com/LabCG-Unioeste"><i class="bi bi-github"></i> LabCG-Unioeste</a>
-                </p>
-            </div>
-
-        </div>
-    </div>
-</footer>
-</main>
+        </footer>
+    </main>
 </body>
-</head>
 </html>
