@@ -154,37 +154,38 @@
     background-color: #ffffff;
     color: #333; /* Um cinza escuro para o texto, para diferenciar do título */
     font-weight: 500;
+    height: 250px;
 }
-.parceiros img{
-    height: 20px;
-    width: auto; 
-    display: flex;
-    margin-top: 80px;   
-    margin-bottom: 80px;
-    flex-direction: column;
-
-    height: 80px; /* Define a altura fixa (px) */
+.parceiros img {
+    height: 80px; /* Define a altura fixa para TODOS os logos */
     width: auto;  /* Largura automática para não distorcer */
     
-    /* Espaçamento (em vez de 80px, usamos 'rem' que é melhor) */
+    /* Espaçamento (o 'col-auto' do Bootstrap trata do alinhamento) */
     margin-top: 2rem;   
     margin-bottom: 2rem;
+    
+    /* Opcional: Adiciona um espaço dos lados */
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.parceiros img[src*="UF-logo.png"] {
+    width: 250px; 
+    height: auto;
+    margin-top: 50px;
 }
 
 .button-contato {
-    /* --- Adicionado para Centralizar --- */
     display: block;         /* Faz o botão se comportar como um bloco */
-    margin-left: auto;      /* Margem automática para a esquerda */
+    margin-left: 0px;      /* Margem automática para a esquerda */
     margin-right: auto;     /* Margem automática para a direita */
     width: 100%;
     max-width: 300px;     /* O botão terá no máximo 300px de largura */
     padding: 12px;
-    border: none;
     text-align: center;  
     color: white;
     background-color: #14828F; /* A cor que você definiu */
     margin-bottom: 15px;
     cursor: pointer;
-    transition: transform 0.2s ease;
 }
 
