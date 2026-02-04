@@ -1,14 +1,14 @@
-/* Cores extraídas do seu login.html */
+/* Cores extraídas de login.html */
 :root {
   --color-gunmetal: #18242c;
   --color-surface: #22303a;
-  --color-primary: #40cf9f; /* O verde neon */
+  --color-primary: #40cf9f; 
   --color-primary-hover: #34b086;
   --color-text-main: #ffffff;
   --color-text-sec: #94a3b8;
 }
 
-/* Container Principal (Fundo da tela) */
+/* Fundo da tela)*/
 .loginWrapper {
   background-color: var(--color-gunmetal);
   min-height: 100vh;
@@ -19,7 +19,7 @@
   padding: 1rem;
 }
 
-/* O Card de Login (Requisito: CSS Modules) */
+/* O Card de Login */
 .loginCard {
   background-color: var(--color-surface);
   padding: 2.5rem;

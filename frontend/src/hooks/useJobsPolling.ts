@@ -1,19 +1,22 @@
 import { useState, useEffect, useRef } from 'react';
 import { jobsService, type JobRead } from '../services/jobs';
 
-export function useJobsPolling() {
-    const [jobs, setJobs] = useState<JobRead[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+
+//Entrada: Nenhuma
+//Saída: jobs, loading e error 
+export function useJobsPolling() { //encapsula a lógica de ficar buscando dados novos a cada 5 segundos
+    const [jobs, setJobs] = useState<JobRead[]>([]); //Lista de trabalhos
+    const [loading, setLoading] = useState(true); //carregamento ou não 
+    const [error, setError] = useState<string | null>(null); //Mensagem de erro ou nulo
 
     // Ref para controlar se o componente está montado (evita set state em unmount)
     const isMounted = useRef(true);
 
     const fetchJobs = async () => {
         try {
-            const data = await jobsService.listJobs();
-            if (isMounted.current) {
-                setJobs(data);
+            const data = await jobsService.listJobs(); // Chama o serviço que criamos no arquivo jobs.ts
+            if (isMounted.current) { // Só atualiza os dados se a página ainda estiver aberta
+                setJobs(data); 
                 setError(null);
             }
         } catch (err) {
@@ -22,17 +25,18 @@ export function useJobsPolling() {
             // apenas logamos silenciosamente após a primeira carga.
             if (loading && isMounted.current) setError("Falha ao carregar galeria.");
         } finally {
+            // Aconteça o que acontecer, desliga o aviso de "Carregando"
             if (isMounted.current) setLoading(false);
         }
     };
 
-    useEffect(() => {
+    useEffect(() => { // Controla o ciclo de vida
         isMounted.current = true;
 
-        // 1. Carga Inicial Imediata
+        // Executa a busca imediatamente ao abrir a página
         fetchJobs();
 
-        // 2. Configurar Intervalo (Polling a cada 5 segundos)
+        // Cria um intervalo que executa a cada 5 segundos.
         const intervalId = setInterval(() => {
             // Opcional: Verificar se a aba está visível antes de chamar
             if (!document.hidden) {
@@ -40,12 +44,12 @@ export function useJobsPolling() {
             }
         }, 5000);
 
-        // 3. Cleanup ao desmontar a página
+        // 3. Cleanup quando o usuário sai da página 
         return () => {
             isMounted.current = false;
             clearInterval(intervalId);
         };
     }, []);
-
+    //Retorna as variáveis prontas para serem usadas na tela
     return { jobs, loading, error };
 }

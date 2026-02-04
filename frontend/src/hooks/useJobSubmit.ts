@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { jobsService, type JobCreate } from '../services/jobs';
 
+//Entrada: Strings e números
+//Saída: Nenhuma
 interface SubmitProps {
     mode: 'TEXT' | 'IMAGE';
     // Dados Text (DreamFusion)
@@ -14,31 +16,37 @@ interface SubmitProps {
     remesh: string;
 }
 
+//Entrada: Nenhuma
+//Saída:submit,isSubmitting e error
 export function useJobSubmit() {
+
+    //Controla se está carregando e se deu erro
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
+    //Função assíncrona que recebe os dados do formulário 
     async function submit({ 
         mode, prompt, steps, guidance, seed, 
         file, textureRes, remesh 
     }: SubmitProps): Promise<boolean> {
         
+        //// Ativa o estado de carregar
         setIsSubmitting(true);
-        setError(null);
+        setError(null); //Limpa os erros anteriores
 
         try {
+           //Prepara a variável do dados a enviar
             let payload: JobCreate;
 
-            if (mode === 'TEXT') {
-                // --- FLUXO 1: TEXTO (DreamFusion) ---
+            if (mode === 'TEXT') { //Se o prompt estiver vazio, para tudo e dá erro
+                // (DreamFusion)
                 if (!prompt.trim()) throw new Error("Por favor, descreva o objeto no prompt.");
 
-                payload = {
+                payload = { //Monta o objeto para a API
                     model_id: 'dreamfusion-sd',
-                    // CORREÇÃO: Prompt enviado no nível raiz (Coluna dedicada no Banco)
-                    prompt: prompt, 
                     
-                    // CORREÇÃO: Apenas parâmetros técnicos ficam no JSONB
+                    prompt: prompt, 
+                    //Objeto dentro de objeto (requisito do trabalho)
                     input_params: {
                         max_steps: steps,
                         guidance_scale: guidance,
@@ -48,16 +56,17 @@ export function useJobSubmit() {
                 };
 
             } else {
-                // --- FLUXO 2: IMAGEM (Stable Fast 3D) ---
+                //Stable Fast 3D)
                 if (!file) throw new Error("Selecione uma imagem de referência (PNG/JPG).");
 
-                // Passo A: Ticket de Upload
+                //Ticket de Upload pedindo permissão
                 const ticket = await jobsService.getUploadTicket(file.name, file.type);
 
-                // Passo B: Upload Binário Direto (MinIO)
+                //Upload Binário Direto enviando o arquivo
                 await jobsService.uploadFileToStorage(ticket.upload_url, file);
 
-                // Passo C: Criação do Job
+                //Criação do Job
+                // Monta o objeto final com o caminho do arquivo já salvo
                 payload = {
                     model_id: 'sf3d-v1',
                     // Prompt omitido (ou null) pois é Image-to-3D
@@ -84,7 +93,7 @@ export function useJobSubmit() {
         }
     }
 
-    return {
+    return { // Retorna a função e as variáveis para quem usar este HooK
         submit,
         isSubmitting,
         error

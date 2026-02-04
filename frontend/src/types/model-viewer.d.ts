@@ -1,5 +1,7 @@
 import React from 'react'; //chama a biblioteca central de React
 
+//Entrada: booleans, strings
+//Saída: Nenhuma
 declare module 'react' { //declara um módulo que vai ser em react
   namespace JSX { //configuração JSX
     interface IntrinsicElements { //lista de todos os elementos HTML do react
