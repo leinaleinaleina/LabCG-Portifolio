@@ -71,8 +71,13 @@ document.addEventListener("DOMContentLoaded", () => { //Espera a página HTML ca
 
 });
 
-// Fica fora do evento, pois é chamado dentro do HTML
-function avisoSubmissao(){
+// CORREÇÃO: Função agora recebe o evento 'e'
+function avisoSubmissao(e) {
+    // PREVINE O ENVIO REAL DO FORMULÁRIO
+    if (e) {
+        e.preventDefault();
+    }
+
     // Guarda os valores para personalizar a mensagem
     const nomeUsuario = document.getElementById('nome').value;
     const vinculoSelecionado = document.querySelector('input[name="vinculo"]:checked');
@@ -89,4 +94,7 @@ function avisoSubmissao(){
 
     // Apresenta caixa de alerta com a mensagem formatada
     alert(`Obrigado, ${nomeUsuario}!\n\nRecebemos sua pré-inscrição como ${textoPerfil}.\nAguarde nosso contato.`);
+    
+    // Opcional: Se quiser limpar o formulário depois do OK do alert
+    document.getElementById('membershipForm').reset();
 }

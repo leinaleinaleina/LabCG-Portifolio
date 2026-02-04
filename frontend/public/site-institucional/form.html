@@ -24,10 +24,10 @@
         </div>
 
         <navbar>
-        <div class = "nav-links">
-            <a href = "construction.html" class = "nav-links">Portifólio</a>
-            <a href = "form.html" class = "nav-links">Contato</a>
-        </div>
+            <div class = "nav-links">
+                <a href = "/" class = "nav-links" style="font-weight: bold; color: #FDCE61;">LabCGera</a>
+                <a href = "form.html" class = "nav-links">Contato</a>
+            </div>
         </navbar>
     </header>
 
@@ -41,7 +41,7 @@
                         <p class="text-muted text-center mb-5">Preencha o formulário abaixo de acordo com seu perfil.</p>
                         
                         <!-- Definição do formulário para inscrição usando o método e ação -->
-                        <form id="membershipForm" onsubmit="avisoSubmissao()" method="post" action="#"">
+                        <form id="membershipForm" onsubmit="avisoSubmissao(event)">
 
                             <!-- Grupo de identificação do usuário, todos campos obrigatórios -->
                             <!-- Tipos utilizados: Text, email, tel, password -->
