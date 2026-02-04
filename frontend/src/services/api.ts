@@ -1,9 +1,11 @@
-import axios from 'axios';
+import axios from 'axios';//requisição HTTP
 
-// Lê a variável do .env. Se não existir, usa o fallback.
+//Define o endereço principal do servidor
+//Lendo a variável do .env. Se não existir, usa o fallback.
 const baseURL = import.meta.env.VITE_API_BASE_URL || '/api/v1';
 
 // Cria instância do axios
+//Otimiza a configuração do endereço, se "treinando" e mandando os dados pro JSON
 export const api = axios.create({
   baseURL: baseURL,
   timeout: 10000,
@@ -12,11 +14,11 @@ export const api = axios.create({
   },
 });
 
-// --- INTERCEPTOR DE REQUISIÇÃO ---
-// Antes de qualquer chamada sair, este código roda.
-api.interceptors.request.use(
+//Requisição
+api.interceptors.request.use( //passa por esse processo antes de qualquer chamada sair
   (config) => {
-    // Busca a chave salva no Login (faremos isso no FRONT-01)
+
+    // Busca a chave salva no Login
     const apiKey = localStorage.getItem('labcg_api_key');
     
     // Se existir, injeta no header padrão que o Backend espera
@@ -31,14 +33,14 @@ api.interceptors.request.use(
   }
 );
 
-// --- INTERCEPTOR DE RESPOSTA (Opcional, mas recomendado) ---
-// Se o token expirar ou for inválido (401/403), podemos deslogar o usuário automaticamente.
+// RESPOSTA
+// Se o token expirar ou for inválido, podemos deslogar o usuário automaticamente
 api.interceptors.response.use(
   (response) => response,
   (error) => {
     // Verifica se existe resposta de erro
     if (error.response) {
-        // Lógica para ignorar o 401 se for na tela de Login
+        // Lógica para ignorar se for na tela de Login
         const isLoginRequest = error.config.url.includes('/auth/login');
 
         if ((error.response.status === 401 || error.response.status === 403) && !isLoginRequest) {
